@@ -31,7 +31,9 @@ dependencies:
     sdk: flutter
 
   onboarding:
-    path: features/onboarding 
+    path: features/onboarding
+  moodle:
+    path: features/moodle 
   dependencies:
     path: shared_libraries/dependencies
   common:

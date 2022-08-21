@@ -242,6 +242,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
+  moodle:
+    dependency: "direct main"
+    description:
+      path: "features/moodle"
+      relative: true
+    source: path
+    version: "0.0.1"
   mustache_template:
     dependency: transitive
     description:
