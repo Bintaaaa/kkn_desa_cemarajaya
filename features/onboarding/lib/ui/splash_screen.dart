@@ -17,7 +17,7 @@ class SplashScreen extends StatelessWidget {
         listener: (context, state) {
           final status = state.splashState.status;
           if (status.isNoData) {
-            onboardingRouter.navigateToMoodleScreen();
+            onboardingRouter.navigateToMainleScreen();
           }
         },
         child: Stack(
