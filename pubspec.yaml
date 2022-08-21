@@ -34,6 +34,8 @@ dependencies:
     path: features/onboarding
   moodle:
     path: features/moodle 
+  bottom_navigation:
+    path: features/bottom_navigation
   dependencies:
     path: shared_libraries/dependencies
   common:

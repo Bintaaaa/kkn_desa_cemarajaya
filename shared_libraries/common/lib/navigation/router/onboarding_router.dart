@@ -3,7 +3,7 @@ import 'package:common/navigation/router/app_router.dart';
 
 abstract class OnboardingRouter {
   void navigateToOnboarding();
-  void navigateToMoodleScreen();
+  void navigateToMainleScreen();
 }
 
 class OnboardingRouterImpl implements OnboardingRouter {
@@ -13,7 +13,7 @@ class OnboardingRouterImpl implements OnboardingRouter {
   });
 
   @override
-  void navigateToMoodleScreen() {
+  void navigateToMainleScreen() {
     navigatorHelper.pushReplacedName(AppRouter.moodle);
   }
 
