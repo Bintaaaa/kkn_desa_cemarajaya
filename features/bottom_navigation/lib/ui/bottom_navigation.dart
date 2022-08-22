@@ -11,7 +11,7 @@ class BottomNaviagationScreen extends StatelessWidget {
   BottomNaviagationScreen({Key? key}) : super(key: key);
   final index = 0;
   final List<Widget> page = [
-    const MoodleScreen(),
+    MoodleScreen(),
     const TraderScreen(),
     const PlaceScreen(),
   ];

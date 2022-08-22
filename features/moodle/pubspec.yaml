@@ -1,6 +1,7 @@
 name: moodle
 description: A new Flutter package project.
 version: 0.0.1
+publish_to: none
 homepage:
 
 environment:
@@ -10,7 +11,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  common:
+    path: ../../shared_libraries/common
+  dependencies:
+    path: ../../shared_libraries/dependencies
+    
 dev_dependencies:
   flutter_test:
     sdk: flutter
