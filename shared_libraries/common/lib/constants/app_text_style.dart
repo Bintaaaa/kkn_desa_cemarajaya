@@ -10,70 +10,70 @@ class AppTextStyle {
 
   static TextStyle kHeading1 = GoogleFonts.dmSans(
     fontSize: 48.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: titleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kHeading2 = GoogleFonts.dmSans(
     fontSize: 36.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: titleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kHeading3 = GoogleFonts.dmSans(
     fontSize: 32.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: titleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kHeading4 = GoogleFonts.dmSans(
     fontSize: 26.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: titleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kHeading5 = GoogleFonts.dmSans(
     fontSize: 22.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: titleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kHeading6 = GoogleFonts.dmSans(
     fontSize: 18.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: titleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kSubtutle1 = GoogleFonts.dmSans(
     fontSize: 22.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: subtitleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kSubtutle2 = GoogleFonts.dmSans(
     fontSize: 18.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: subtitleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kSubtutle3 = GoogleFonts.dmSans(
     fontSize: 14.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: subtitleFontWeigth,
     letterSpacing: 0.15,
   );
 
   static TextStyle kSubtutle4 = GoogleFonts.dmSans(
     fontSize: 12.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: subtitleFontWeigth,
     letterSpacing: 0.15,
   );

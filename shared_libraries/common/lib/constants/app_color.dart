@@ -20,4 +20,7 @@ class AppColor {
 
   /// Color: #121212
   static const Color titleColor = Color(0xFF121212);
+
+  /// Color: #121212
+  static const Color blackColor = Color(0xFF000000);
 }
