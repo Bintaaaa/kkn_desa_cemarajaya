@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
             );
           case AppRouter.moodleDetail:
             return MaterialPageRoute(
-              builder: (_) => const MoodleDetailScreen(),
+              builder: (_) => MoodleDetailScreen(),
             );
 
           default:
