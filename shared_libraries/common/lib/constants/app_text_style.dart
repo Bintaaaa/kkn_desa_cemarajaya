@@ -80,23 +80,24 @@ class AppTextStyle {
 
   static TextStyle kBody1 = GoogleFonts.dmSans(
     fontSize: 14.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: bodyFontWeigth,
-    letterSpacing: 0.15,
+    letterSpacing: 1,
+    height: 2,
   );
 
   static TextStyle kBody2 = GoogleFonts.dmSans(
     fontSize: 14.0,
-    color: AppColor.subtitleColor,
+    color: AppColor.blackColor,
     fontWeight: bodyFontWeigth,
-    letterSpacing: 0.15,
+    letterSpacing: 1,
+    height: 2,
   );
 
   static TextStyle kButton1 = GoogleFonts.dmSans(
     fontSize: 22.0,
     color: AppColor.secondaryColor,
     fontWeight: bodyFontWeigth,
-    letterSpacing: 0.15,
   );
   static TextStyle kButton2 = GoogleFonts.dmSans(
     fontSize: 22.0,

@@ -3,6 +3,7 @@ import 'package:common/navigation/router/app_router.dart';
 
 abstract class MoodleRouter {
   void navigateToMoodleDetail(argument);
+  void navigateToMoodle();
 }
 
 class MoodleRouterImpl implements MoodleRouter {
@@ -17,4 +18,7 @@ class MoodleRouterImpl implements MoodleRouter {
         AppRouter.moodleDetail,
         argument: argument,
       );
+
+  @override
+  void navigateToMoodle() => navigatorHelper.pop();
 }
