@@ -5,6 +5,7 @@ import 'package:common/navigation/router/app_router.dart';
 import 'package:dependencies/bloc/bloc.dart';
 import 'package:desa_cemarajaya/injection/injection.dart';
 import 'package:flutter/material.dart';
+import 'package:moodle/ui/moodle_detail_screen.dart';
 import 'package:onboarding/bloc/splash/splash_cubit.dart';
 import 'package:onboarding/ui/splash_screen.dart';
 
@@ -50,6 +51,10 @@ class MyApp extends StatelessWidget {
                 ],
                 child: BottomNaviagationScreen(),
               ),
+            );
+          case AppRouter.moodleDetail:
+            return MaterialPageRoute(
+              builder: (_) => const MoodleDetailScreen(),
             );
 
           default:
