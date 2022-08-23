@@ -22,55 +22,59 @@ class MoodleScreen extends StatelessWidget {
                 const SizedBox(
                   height: 16.0,
                 ),
-                GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                    maxCrossAxisExtent: 200,
-                    childAspectRatio: 1.6 / 2,
-                    crossAxisSpacing: 20,
-                    mainAxisSpacing: 20,
-                  ),
-                  shrinkWrap: true,
-                  primary: true,
-                  physics: const ScrollPhysics(),
-                  itemCount: 6,
-                  itemBuilder: (context, index) {
-                    return InkWell(
-                      onTap: () => moodleRouter.navigateToMoodleDetail(1),
-                      child: Stack(
-                        children: [
-                          Container(
-                            alignment: Alignment.center,
-                            padding: const EdgeInsets.all(8.0),
-                            decoration: const BoxDecoration(
-                              color: AppColor.blackColor,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(18.0),
-                              ),
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/ex_moodle.png",
-                                ),
-                                opacity: 0.55,
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                            child: Text(
-                              "Belajar Marketing dari Mahasiswa Unsika",
-                              style: AppTextStyle.kSubtutle2.copyWith(
-                                color: AppColor.secondaryColor,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
-                )
+                _listMoodle()
               ],
             ),
           ),
         ),
       ),
+    );
+  }
+
+  GridView _listMoodle() {
+    return GridView.builder(
+      gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+        maxCrossAxisExtent: 200,
+        childAspectRatio: 1.6 / 2,
+        crossAxisSpacing: 20,
+        mainAxisSpacing: 20,
+      ),
+      shrinkWrap: true,
+      primary: true,
+      physics: const ScrollPhysics(),
+      itemCount: 6,
+      itemBuilder: (context, index) {
+        return InkWell(
+          onTap: () => moodleRouter.navigateToMoodleDetail(1),
+          child: Stack(
+            children: [
+              Container(
+                alignment: Alignment.center,
+                padding: const EdgeInsets.all(8.0),
+                decoration: const BoxDecoration(
+                  color: AppColor.blackColor,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(18.0),
+                  ),
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "assets/ex_moodle.png",
+                    ),
+                    opacity: 0.55,
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: Text(
+                  "Belajar Marketing dari Mahasiswa Unsika",
+                  style: AppTextStyle.kSubtutle2.copyWith(
+                    color: AppColor.secondaryColor,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 
