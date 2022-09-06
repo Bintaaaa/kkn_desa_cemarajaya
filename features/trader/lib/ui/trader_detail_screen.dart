@@ -2,17 +2,25 @@ import 'package:common/constants/app_color.dart';
 import 'package:common/constants/app_text_style.dart';
 import 'package:common/navigation/router/umkm_router.dart';
 import 'package:dependencies/get_it/get_it.dart';
+import 'package:dependencies/url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
+import 'package:trader_model/data/model/trader_model.dart';
 
 class TraderDetailScreen extends StatelessWidget {
   final UmkmRouter umkmRouter = sl();
-  TraderDetailScreen({Key? key}) : super(key: key);
+  final Traders trader;
+  TraderDetailScreen({
+    Key? key,
+    required this.trader,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          _lauchUrl(trader.whatsApp);
+        },
         backgroundColor: Colors.green[400],
         child: const Icon(Icons.call),
       ),
@@ -26,7 +34,16 @@ class TraderDetailScreen extends StatelessWidget {
                   18.0,
                 ),
                 child: Text(
-                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                  trader.title,
+                  style: AppTextStyle.kHeading5,
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.all(
+                  18.0,
+                ),
+                child: Text(
+                  trader.description,
                   style: AppTextStyle.kBody1,
                 ),
               )
@@ -43,12 +60,12 @@ class TraderDetailScreen extends StatelessWidget {
         Container(
           width: double.infinity,
           height: 200,
-          decoration: const BoxDecoration(
-            borderRadius: BorderRadius.vertical(
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.vertical(
               bottom: Radius.circular(24.0),
             ),
             image: DecorationImage(
-              image: AssetImage("assets/place.jpg"),
+              image: AssetImage("assets/${trader.imageLandscape}"),
               fit: BoxFit.cover,
             ),
           ),
@@ -75,5 +92,20 @@ class TraderDetailScreen extends StatelessWidget {
         )
       ],
     );
+  }
+
+  Future<void> _lauchUrl(String uri) async {
+    var url = Uri(
+      scheme: 'https',
+      host: 'wa.me',
+      path: '/$uri',
+    );
+
+    if (!await launchUrl(
+      url,
+      mode: LaunchMode.externalApplication,
+    )) {
+      throw 'Could not launch $url';
+    }
   }
 }

@@ -1,22 +1,16 @@
-name: trader
+name: place
 description: A new Flutter package project.
 version: 0.0.1
-publish_to: none
 homepage:
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: '>=2.18.0 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  common:
-    path: ../../shared_libraries/common
-  dependencies:
-    path: ../../shared_libraries/dependencies
-  trader_model:
-    path: ../../domains/data/trader
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

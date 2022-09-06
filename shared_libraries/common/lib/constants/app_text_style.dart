@@ -79,7 +79,7 @@ class AppTextStyle {
   );
 
   static TextStyle kBody1 = GoogleFonts.dmSans(
-    fontSize: 14.0,
+    fontSize: 16.0,
     color: AppColor.blackColor,
     fontWeight: bodyFontWeigth,
     letterSpacing: 1,

@@ -4,4 +4,5 @@ name: desa_cemarajaya
 packages:
 - features/**
 - shared_libraries/**
+- domains/**
 - '*'

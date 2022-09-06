@@ -3,6 +3,8 @@ import 'package:common/constants/app_text_style.dart';
 import 'package:common/navigation/router/moodle_router.dart';
 import 'package:dependencies/get_it/get_it.dart';
 import 'package:flutter/material.dart';
+import 'package:moodle/ui/moodle_detail_screen.dart';
+import 'package:moodle_model/model/moodle_model.dart';
 
 class MoodleScreen extends StatelessWidget {
   final MoodleRouter moodleRouter = sl();
@@ -42,30 +44,40 @@ class MoodleScreen extends StatelessWidget {
       shrinkWrap: true,
       primary: true,
       physics: const ScrollPhysics(),
-      itemCount: 6,
+      itemCount: moodleData.length,
       itemBuilder: (context, index) {
+        final dynamic moodle = moodleData[index];
         return InkWell(
-          onTap: () => moodleRouter.navigateToMoodleDetail(1),
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return MoodleDetailScreen(
+                  moodle: moodle,
+                );
+              },
+            ),
+          ),
           child: Stack(
             children: [
               Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(8.0),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: AppColor.blackColor,
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(18.0),
                   ),
                   image: DecorationImage(
                     image: AssetImage(
-                      "assets/ex_moodle.png",
+                      "assets/${moodle.image}",
                     ),
                     opacity: 0.55,
                     fit: BoxFit.fill,
                   ),
                 ),
                 child: Text(
-                  "Belajar Marketing dari Mahasiswa Unsika",
+                  moodle.title,
                   style: AppTextStyle.kSubtutle2.copyWith(
                     color: AppColor.secondaryColor,
                   ),
