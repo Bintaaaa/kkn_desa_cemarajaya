@@ -12,7 +12,7 @@ class BottomNaviagationScreen extends StatelessWidget {
   final index = 0;
   final List<Widget> page = [
     MoodleScreen(),
-    const TraderScreen(),
+    TraderScreen(),
     const PlaceScreen(),
   ];
   @override

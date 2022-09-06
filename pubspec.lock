@@ -458,7 +458,7 @@ packages:
     source: hosted
     version: "0.4.9"
   trader:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "features/trader"
       relative: true

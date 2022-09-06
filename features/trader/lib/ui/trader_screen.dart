@@ -1,9 +1,12 @@
 import 'package:common/constants/app_color.dart';
 import 'package:common/constants/app_text_style.dart';
+import 'package:common/navigation/router/umkm_router.dart';
+import 'package:dependencies/get_it/get_it.dart';
 import 'package:flutter/material.dart';
 
 class TraderScreen extends StatelessWidget {
-  const TraderScreen({Key? key}) : super(key: key);
+  final UmkmRouter umkmRouter = sl();
+  TraderScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +98,7 @@ class TraderScreen extends StatelessWidget {
 
   InkWell card_umkm() {
     return InkWell(
-      onTap: () {},
+      onTap: () => umkmRouter.navigateToDetail(1),
       child: Stack(
         children: [
           Container(

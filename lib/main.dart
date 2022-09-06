@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:moodle/ui/moodle_detail_screen.dart';
 import 'package:onboarding/bloc/splash/splash_cubit.dart';
 import 'package:onboarding/ui/splash_screen.dart';
+import 'package:trader/ui/trader_detail_screen.dart';
+import 'package:trader/ui/trader_screen.dart';
 
 void main() {
   Injection().initialize();
@@ -56,7 +58,14 @@ class MyApp extends StatelessWidget {
             return MaterialPageRoute(
               builder: (_) => MoodleDetailScreen(),
             );
-
+          case AppRouter.traderDetail:
+            return MaterialPageRoute(
+              builder: (_) => TraderDetailScreen(),
+            );
+          case AppRouter.trader:
+            return MaterialPageRoute(
+              builder: (_) => TraderScreen(),
+            );
           default:
             return MaterialPageRoute(
               builder: (_) => SplashScreen(),

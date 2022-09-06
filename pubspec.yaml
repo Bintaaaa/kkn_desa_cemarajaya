@@ -34,6 +34,8 @@ dependencies:
     path: features/onboarding
   moodle:
     path: features/moodle 
+  trader:
+    path: features/trader  
   bottom_navigation:
     path: features/bottom_navigation
   dependencies:
