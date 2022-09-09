@@ -5,4 +5,5 @@ packages:
 - features/**
 - shared_libraries/**
 - domains/**
+- lib/**
 - '*'

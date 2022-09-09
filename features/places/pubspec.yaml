@@ -14,6 +14,10 @@ dependencies:
   
   common:
     path: ../../shared_libraries/common
+  dependencies:
+    path: ../../shared_libraries/dependencies
+  place:
+    path: ../../domains/data/place
 
 dev_dependencies:
   flutter_test:

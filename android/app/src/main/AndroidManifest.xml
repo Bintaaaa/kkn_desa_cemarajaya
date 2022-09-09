@@ -15,7 +15,7 @@
   </intent>
 </queries>
    <application
-        android:label="desa_cemarajaya"
+        android:label="Cemarajaya"
         android:usesCleartextTraffic="true"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
